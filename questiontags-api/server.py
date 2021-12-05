@@ -49,7 +49,7 @@ def load_model():
 
 
 @app.get("/")
-def home(request: Request):
+async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/")
